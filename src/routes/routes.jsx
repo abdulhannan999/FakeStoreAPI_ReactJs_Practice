@@ -1,5 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
-
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import ElectronicsPage from "../pages/categories/EelectronicsPage";
 import FurniturePage from "../pages/categories/MenPage";
@@ -10,14 +9,17 @@ import SingleProduct from "../pages/SingleProduct/SingleProduct";
 import CartPage from "../pages/cart/CartPage";
 import ProductGallery from "../pages/categories/ProductGallery";
 
-
 export const router = createBrowserRouter([
   {
-    path: "/all-products",
+    path: "/",
     element: <Layout />,
     children: [
       {
-        path: "/all-products",
+        index: true, // 👈 This handles "/"
+        element: <Navigate to="all-products" replace />
+      },
+      {
+        path: "all-products",
         element: <ProductGallery />
       },
       {
@@ -37,13 +39,12 @@ export const router = createBrowserRouter([
         element: <WomenPage/>
       },
       {
-        path:"/:id",
-        element:<SingleProduct/>
-      }
-      ,
+        path: ":id",
+        element: <SingleProduct/>
+      },
       {
-        path:"/cart",
-        element:<CartPage/>
+        path: "cart",
+        element: <CartPage/>
       }
     ]
   }

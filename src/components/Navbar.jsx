@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="text-gray-600 body-font shadow-md sticky top-0 bg-white z-50">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
+    <header className="text-gray-600 md:max-h-[300px] body-font shadow-md sticky top-0 bg-white z-50">
+      <div className="container mx-auto md:max-h-[300px]  flex  p-5 flex-col md:flex-row items-center justify-between">
       
         <NavLink to="/all-products" className="flex title-font font-medium items-center text-gray-900">
-<img src={logo} className="h-[100px]" alt="Logo" />
+<img src={logo} className="h-[150px]" alt="Logo" />
         </NavLink>
 
       
