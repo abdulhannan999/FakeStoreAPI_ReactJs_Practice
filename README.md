@@ -32,13 +32,13 @@ The home page displays all products retrieved from the FakeStore API. Products a
 
 When a user clicks on a product, they are taken to the Single Product page. This page shows detailed information about the selected product.
 
-![Single Product Screenshot](page2.jpeg)
+![Single Product Screenshot](page3.jpeg)
 
 ### 3\. Cart Page
 
 The cart page displays all the items the user has added to their cart. Users can increase/decrease quantity or remove items completely. Cart operations are managed using reducers.
 
-![Cart Page Screenshot](page3.jpeg)
+![Cart Page Screenshot](page2.jpeg)
 
 Technologies Used
 -----------------
